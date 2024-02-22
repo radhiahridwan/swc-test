@@ -1,0 +1,54 @@
+/*
+Program description/purpose: To calculate area of the shape that have been chosen
+Programmer: Radhiah
+Date: 22 February 2024
+*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main () {
+	
+    int choice;
+	double radius, length, width, area;
+	const double PI = 3.142;
+
+    cout << "Choose a shape to calculate its area:" << endl; 
+	cout << "1. Circle" << endl;
+	cout << "2. Rectangle" << endl;
+	cout << "Enter your choice (1 or 2): " << endl;
+	cin >> choice;
+	
+	if (choice == 1) {
+		cout << "Enter the radius of the circle: ";
+		cin >> radius ;
+	
+	    //Calculate area of circle
+	    area = PI *pow(radius, 2) ;
+		cout << "Area of the circle is:" << area << endl;
+	}
+	else if (choice == 2) {
+	    cout << "Enter the length and width of the rectangle: ";
+		cout << "Enter the length of the rectangle: ";
+		cin >> length;
+		cout << "Enter the width of the rectangle: ";
+		cin >> width;
+		
+		if ((length > 0) || (width > 0)) {
+		
+	    cout << "Invalid input. Length and width cannot be negative." << endl;
+			
+	    // Calculate area of rectangle 
+	    area = length * width;
+		cout << "Area of the rectangle is: " << area << endl;
+   }
+   else
+        cout << "Invalid choice. Please enter 1 or 2." << endl;
+   } //end of if
+    
+    return 0;
+    
+}//end of the main function
+		
+		
+	
